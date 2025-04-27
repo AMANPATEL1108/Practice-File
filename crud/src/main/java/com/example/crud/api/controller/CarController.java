@@ -22,26 +22,35 @@ public class CarController {
     }
 
     @GetMapping("/getallcar")
-    public List<Car> gatallcars(){
+    public List<Car> gatallcars() {
         return carServices.getAllCar();
     }
 
     @DeleteMapping("/deletcar/{id}")
-    public String deleteCar(@PathVariable Integer id){
+    public String deleteCar(@PathVariable Integer id) {
         carServices.deleteCar(id);
         return "Deleted SuccesFully";
     }
 
     @GetMapping("/getbyid/{id}")
-    public Optional<Car> getcarById(@PathVariable Integer id){
+    public Optional<Car> getcarById(@PathVariable Integer id) {
         return carServices.findById(id);
     }
 
 
     @PutMapping("/updatedbyid/{id}")
-    public String updatedById(@PathVariable Integer id,@RequestBody Car car){
-        return carServices.updatedById(id,car);
+    public String updatedById(@PathVariable Integer id, @RequestBody Car car) {
+        return carServices.updatedById(id, car);
     }
 
+    @GetMapping("/carname/{name}")
+    public List<Car> findCarThrewName(@PathVariable String name) {
+        return carServices.findCarByNameservice(name);
+    }
+
+    @GetMapping("/carversion/{keyword}")
+    public List<Car> findCarByVersion(@PathVariable String keyword) {
+        return carServices.findCarByVersionKeywordservice(keyword);
+    }
 
 }

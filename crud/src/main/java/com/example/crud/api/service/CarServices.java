@@ -47,4 +47,13 @@ public class CarServices {
 
 
 
+
+    public List<Car> findCarByNameservice(String name) { // Removed @PathVariable
+        return carRepository.findCarByName(name);
+    }
+
+    public List<Car> findCarByVersionKeywordservice(String keyword) { // Removed @PathVariable
+        return carRepository.findCarByVersionKeyword(keyword);
+    }
+
 }
