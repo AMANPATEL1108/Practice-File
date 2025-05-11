@@ -5,22 +5,19 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
 @Data
-@Table(name = "address")
+@Entity
+@Table(name = "laptop")
 @AllArgsConstructor
 @NoArgsConstructor
-public class Address {
+public class Laptop {
 
     @Id
-    private int addressId;
-    private String street;
-    private String city;
-    private String country;
+    private Integer laptopId;
+    private String modelNumber;
+    private String brand;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "student_id")
-    private  Student student;
-
-
+    private Student student;
 }
