@@ -1,4 +1,7 @@
 package com.example.SecDBConnectionExample.api.Repository;
 
-public interface InvertoryRepository {
+import com.example.SecDBConnectionExample.api.model.Invertory;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface InvertoryRepository extends JpaRepository<Invertory,Integer> {
 }

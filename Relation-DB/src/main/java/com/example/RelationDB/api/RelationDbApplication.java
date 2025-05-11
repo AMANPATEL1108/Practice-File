@@ -76,47 +76,47 @@ public class RelationDbApplication {
 //        Student save=studentRepository.save(stude);
 
 
-//        Product product1 = new Product();
-//        product1.setPId("pid1");
-//        product1.setProductName("IPhone 14 Max Pro");
-//
-//        Product product2 = new Product();
-//        product2.setPId("pid2");
-//        product2.setProductName("Samsung S24");
-//
-//        Product product3 = new Product();
-//        product3.setPId("pid3");
-//        product3.setProductName("Samsung TV123");
-//
-//        Category category1 = new Category();
-//        category1.setCId("cid1");
-//        category1.setTitle("Electronics");
-//
-//
-//        Category category2 = new Category();
-//        category2.setCId("cid2");
-//        category2.setTitle("Mobiles Phones");
-//
-//
-//        List<Product> category1Products = category1.getProducts();
-//        category1Products.add(product1);
-//        category1Products.add(product2);
-//        category1Products.add(product3);
-//
-//
-//        List<Product> category2Products = category2.getProducts();
-//        category2Products.add(product1);
-//        category2Products.add(product2);
-//
-//        categoryRepository.save(category1);
-//        categoryRepository.save(category2);
+        Product product1 = new Product();
+        product1.setPId("pid1");
+        product1.setProductName("IPhone 14 Max Pro");
 
-      Category category=categoryRepository.findById("cid1").get();
-        System.out.println(category.getProducts().size());
+        Product product2 = new Product();
+        product2.setPId("pid2");
+        product2.setProductName("Samsung S24");
+
+        Product product3 = new Product();
+        product3.setPId("pid3");
+        product3.setProductName("Samsung TV123");
+
+        Category category1 = new Category();
+        category1.setCId("cid1");
+        category1.setTitle("Electronics");
 
 
-        Category category2=categoryRepository.findById("cid2").get();
-        System.out.println(category2.getProducts().size());
+        Category category2 = new Category();
+        category2.setCId("cid2");
+        category2.setTitle("Mobiles Phones");
+
+
+        List<Product> category1Products = category1.getProducts();
+        category1Products.add(product1);
+        category1Products.add(product2);
+        category1Products.add(product3);
+
+
+        List<Product> category2Products = category2.getProducts();
+        category2Products.add(product1);
+        category2Products.add(product2);
+
+        categoryRepository.save(category1);
+        categoryRepository.save(category2);
+
+//      Category category=categoryRepository.findById("cid1").get();
+//        System.out.println(category.getProducts().size());
+//
+//
+//        Category category2=categoryRepository.findById("cid2").get();
+//        System.out.println(category2.getProducts().size());
 
         System.out.println("Student created successfully");
     }
